@@ -1,3 +1,7 @@
+# Install Python dependencies:
+# pip install rembg requests Pillow onnxruntime
+
+
 import requests
 import base64
 from rembg import remove
