@@ -1,6 +1,6 @@
 # Shopify Product Image Background Remover
 
-This Python script retrieves all products and their images from a Shopify store, removes their backgrounds using the [rembg](https://github.com/danielgatis/rembg) library, and updates the existing images on Shopify to have transparent backgrounds. This keeps the same image order and simply updates the original images in place.
+This Python script retrieves all products and their images from a Shopify store, removes their backgrounds using the [rembg](https://github.com/danielgatis/rembg) library, and Updates the existing Shopify product images with the processed (Removed background) versions. This keeps the same image order and simply updates the original images in place.
 
 ## Features
 - Fetches all products from a Shopify store.
