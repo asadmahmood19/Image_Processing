@@ -13,7 +13,6 @@ from io import BytesIO
 SHOPIFY_STORE_DOMAIN = "your-store.myshopify.com"  # Replace with your store domain
 SHOPIFY_ACCESS_TOKEN = "your-shopify-access-token"  # Replace with your Access Token
 
-
 SHOPIFY_API_VERSION = "2023-07"
 
 HEADERS = {
