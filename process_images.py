@@ -1,11 +1,19 @@
+
 import requests
 import base64
 from rembg import remove
 from io import BytesIO
 
 # --- CONFIGURATION ---
-SHOPIFY_STORE_DOMAIN = "irepbrand.myshopify.com"
-SHOPIFY_ACCESS_TOKEN = "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"
+# To get your SHOPIFY_ACCESS_TOKEN, go to Shopify admin:
+# Settings > Apps and sales channels > Develop apps > Create an app
+# Name your app and allow `read_products` and `write_products` permissions, 
+# then install the app and copy the generated access token (starts with `shpat_`).
+
+SHOPIFY_STORE_DOMAIN = "your-store.myshopify.com"  # Replace with your store domain
+SHOPIFY_ACCESS_TOKEN = "your-shopify-access-token"  # Replace with your Access Token
+
+
 SHOPIFY_API_VERSION = "2023-07"
 
 HEADERS = {
@@ -48,7 +56,7 @@ def download_image(url):
     return r.content
 
 def remove_bg(image_bytes):
-    return remove(image_bytes)  # rembg's remove function returns image bytes with background removed
+    return remove(image_bytes)  # rembg's remove function returns image bytes with the background removed
 
 def update_product_image(product_id, image_id, image_bytes):
     # Convert the processed image bytes to base64
@@ -58,7 +66,6 @@ def update_product_image(product_id, image_id, image_bytes):
         "image": {
             "id": image_id,
             "attachment": base64_image
-            # No need to specify position if you want it unchanged
         }
     }
 
